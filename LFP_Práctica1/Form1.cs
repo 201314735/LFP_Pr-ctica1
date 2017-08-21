@@ -486,7 +486,7 @@ namespace LFP_Práctica1
         {
 
             pintarFondo();
-            //pintarPixel();
+            
             graphviz();
 
 
@@ -538,19 +538,19 @@ namespace LFP_Práctica1
                         {
                             if (lista.ElementAt(z - 3).Lexema.Equals("verde"))
                             {
-                                colorFondo = "fillcolor=green,";
+                                colorFondo = "fillcolor=green, color=green,";
                             }
                             else if (lista.ElementAt(z - 3).Lexema.Equals("rojo"))
                             {
-                                colorFondo = "fillcolor=red,";
+                                colorFondo = "fillcolor=red, color=red";
                             }
                             else if (lista.ElementAt(z - 3).Lexema.Equals("azul"))
                             {
-                                colorFondo = "fillcolor=blue,";
+                                colorFondo = "fillcolor=blue, color=blue,";
                             }
                             else if (lista.ElementAt(z - 3).Lexema.Equals("amarillo"))
                             {
-                                colorFondo = "fillcolor=yellow,";
+                                colorFondo = "fillcolor=yellow, color=yellow,";
                             }
 
                         }
@@ -566,7 +566,7 @@ namespace LFP_Práctica1
 
                     }
 
-                    grafo.Write(" digraph G{  nodesep = 0.2; ranksep=0; node[shape = circle,style=filled," + colorFondo + "fixedsize=true,fontsize=5]; edge[style = invis];");
+                    grafo.Write(" digraph G{  bgcolor=\"black\"; nodesep = 0;  ranksep=0; node[label=\"\",shape = square,style=filled, fillcolor=black," + colorFondo + "fixedsize=true]; edge[style = invis];");
 
                     for (int j = 0; j < vertical; j++)
                     {
@@ -621,19 +621,19 @@ namespace LFP_Práctica1
                         {
                             if (lista.ElementAt(z - 3).Lexema.Equals("verde"))
                             {
-                                colorPixel = "fillcolor=green";
+                                colorPixel = "fillcolor=green, color=green";
                             }
                             else if (lista.ElementAt(z - 3).Lexema.Equals("rojo"))
                             {
-                                colorPixel = "fillcolor=red";
+                                colorPixel = "fillcolor=red, color=red";
                             }
                             else if (lista.ElementAt(z - 3).Lexema.Equals("azul"))
                             {
-                                colorPixel = "fillcolor=blue";
+                                colorPixel = "fillcolor=blue, color=blue";
                             }
                             else if (lista.ElementAt(z - 3).Lexema.Equals("amarillo"))
                             {
-                                colorPixel = "fillcolor=yellow";
+                                colorPixel = "fillcolor=yellow, color=yellow";
                             }
 
                         }
